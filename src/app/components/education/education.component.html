@@ -1,0 +1,99 @@
+<div class="container my-4">
+   <div class="row">
+      <h1 class="text-center text-primary">Education</h1>
+      <div class="col-lg-2">
+         <button type="button" class="btn btn-primary" routerLink="/newedu" *ngIf="isLogged">
+            New Education
+         </button>
+      </div>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-11">
+         <table class="table">
+            <tbody>
+               <tr *ngFor="let edu of education">
+                  <td>
+                     <h2 class="text-light">{{edu.eduName}}</h2>
+                  </td>
+                  <td class="text-light">{{edu.eduDesc}} </td>
+                  <td>
+                     <button class="btn btn-success" routerLink="/eduupdate/{{edu.id}}">
+                        Edit
+                     </button>
+                  </td>
+                  <td>
+                     <button class="btn btn-danger" (click)="delete(edu.id)">
+                        X
+                     </button>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+
+      <!-- <div class="col-lg-11" *ngIf="!isLogged">
+         <table class="table">
+            <thead>
+               <tr>
+                  <td class="text-light">Edu. Name</td>
+                  <td class="text-light">Description</td>
+                  <td class="text-light">Accion</td>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <h2 class="text-light">Argentina Programa</h2>
+                  </td>
+                  <td class="text-light">Curso de devoloper Full stack </td>
+                  <td>
+                     <button class="btn btn-success" routerLink="/eduupdate/1">
+                        Edit
+                     </button>
+                  </td>
+                  <td>
+                     <button class="btn btn-danger">
+                        X
+                     </button>
+                  </td>
+               </tr>
+            </tbody>
+            <tbody>
+               <tr>
+                  <td>
+                     <h2 class="text-light">Argentina Programa</h2>
+                  </td>
+                  <td class="text-light">Curso de devoloper Full stack </td>
+                  <td>
+                     <button class="btn btn-success" routerLink="/eduupdate/1">
+                        Edit
+                     </button>
+                  </td>
+                  <td>
+                     <button class="btn btn-danger">
+                        X
+                     </button>
+                  </td>
+               </tr>
+            </tbody>
+            <tbody>
+               <tr>
+                  <td>
+                     <h2 class="text-light">Argentina Programa</h2>
+                  </td>
+                  <td class="text-light">Curso de devoloper Full stack </td>
+                  <td>
+                     <button class="btn btn-success" routerLink="/eduupdate/1">
+                        Edit
+                     </button>
+                  </td>
+                  <td>
+                     <button class="btn btn-danger">
+                        X
+                     </button>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div> -->
+   </div>

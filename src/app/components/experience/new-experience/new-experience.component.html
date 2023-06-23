@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" #f="ngForm">
+                <div class="form-group">
+                    <label for="expName">Nombre de la empresa</label>
+                    <input type="text" class="from-control" id="expName" name="expName" [(ngModel)]="expName" required>
+                </div>
+                <div class="form-group">
+                    <label for="expDesc">Descripcion de la clase</label>
+                    <input type="text" class="from-control" id="expDesc" name="expDesc" [(ngModel)]="expDesc" required>
+                </div>
+                <button  type="submit" class="btn btn-primary">
+                    Add experience
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

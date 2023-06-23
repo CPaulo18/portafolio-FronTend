@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <div class="navbar-brand ">
+        <img src="../../../assets/APLogo.png" id="APlogo">
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      
+      <a class="navbar-nav ms-sm-3"><img src="../../../assets/1161953_instagram_icon.png" id="socialMedia"></a>
+      <a class="navbar-nav"><img src="../../../assets/1181190_email_gmail_google_mail_icon.png" id="socialMedia"></a>
+      <a class="navbar-nav"><img src="../../../assets/104493_linkedin_icon.png" id="socialMedia"></a>
+      <a class="navbar-nav"><img src="../../../assets/843786_whatsapp_icon.png" id="socialMedia"></a>
+      <button class="btn btn-primary ms-3" (click)="Login()" *ngIf="!isLogged">login</button>
+      <button class="btn btn-primary ms-3" (click)="LogOut()" *ngIf="isLogged">logOut</button>
+      </div>
+    </div>
+</nav>
+  
+
+
+
+
+
+

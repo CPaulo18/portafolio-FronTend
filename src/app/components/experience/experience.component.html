@@ -1,0 +1,101 @@
+<div class="container my-4">
+   <div class="row">
+      <h1 class="text-center text-primary">job experience</h1>
+      <div class="col-lg-2">
+         <button type="button" class="btn btn-primary" routerLink="/newexp" *ngIf="isLogged">
+            New experience
+         </button>
+      </div>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-11">
+         <table class="table">
+            <tbody>
+               <tr *ngFor="let exp of expe">
+                  <td>
+                     <h2 class="text-light">{{exp.expName}}</h2>
+                  </td>
+                  <td class="text-light">{{exp.expDesc}} </td>
+                  <td>
+                     <button class="btn btn-success" routerLink="/expupdate/{{exp.id}}">
+                        Edit
+                     </button>
+                  </td>
+                  <td>
+                     <button class="btn btn-danger" (click)="delete(exp.id)">
+                        X
+                     </button>
+                  </td>
+               </tr>
+            </tbody>
+
+         </table>
+      </div>
+
+      <!-- <div class="col-lg-11" *ngIf="!isLogged">
+         <table class="table">
+            <thead>
+               <tr>
+                  <td class="text-light">Exp. Name</td>
+                  <td class="text-light">Description</td>
+                  <td class="text-light">Accion</td>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <h2 class="text-light">taller mecanico</h2>
+                  </td>
+                  <td class="text-light">Ayudanten en taller mecanico</td>
+                  <td>
+                     <button class="btn btn-success" routerLink="/expupdate/1">
+                        Edit
+                     </button>
+                  </td>
+                  <td>
+                     <button class="btn btn-danger">
+                        X
+                     </button>
+                  </td>
+               </tr>
+            </tbody>
+            <tbody>
+               <tr>
+                  <td>
+                     <h2 class="text-light">taller mecanico</h2>
+                  </td>
+                  <td class="text-light">Ayudanten en taller mecanico</td>
+                  <td>
+                     <button class="btn btn-success" routerLink="/expupdate/1">
+                        Edit
+                     </button>
+                  </td>
+                  <td>
+                     <button class="btn btn-danger">
+                        X
+                     </button>
+                  </td>
+               </tr>
+            </tbody>
+            <tbody>
+               <tr>
+                  <td>
+                     <h2 class="text-light">taller mecanico</h2>
+                  </td>
+                  <td class="text-light">Ayudanten en taller mecanico</td>
+                  <td>
+                     <button class="btn btn-success" routerLink="/expupdate/1">
+                        Edit
+                     </button>
+                  </td>
+                  <td>
+                     <button class="btn btn-danger">
+                        X
+                     </button>
+                  </td>
+               </tr>
+            </tbody>
+
+         </table>
+      </div> -->
+   </div>
+</div>

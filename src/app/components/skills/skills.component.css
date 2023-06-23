@@ -1,0 +1,11 @@
+.circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" #f="ngForm">
+                <div class="form-group">
+                    <label for="eduName">instituto</label>
+                    <input type="text" class="from-control" id="eduName" name="eduName" [(ngModel)]="eduName" required>
+                </div>
+                <div class="form-group">
+                    <label for="eduDesc">Descripcion de la carrera</label>
+                    <input type="text" class="from-control" id="eduDesc" name="eduDesc" [(ngModel)]="eduDesc" required>
+                </div>
+                <button  type="submit" class="btn btn-primary">
+                    Add education
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
