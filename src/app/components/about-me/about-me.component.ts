@@ -16,6 +16,7 @@ export class AboutMeComponent implements OnInit {
   constructor(private sUser: SUserService, private apiService: UserService) {}
 
   ngOnInit(): void {
+    this.loadPerson();
     if (this.apiService.getToken()) {
       this.isLogged = true;
     } else {
@@ -26,6 +27,7 @@ export class AboutMeComponent implements OnInit {
   loadPerson(): void {
     this.sUser.detail(2).subscribe((data) => {
       this.user = data;
+      console.log(this.user);
     });
   }
 }

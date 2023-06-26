@@ -16,12 +16,12 @@
                   </td>
                   <td class="text-light">{{exp.expDesc}} </td>
                   <td>
-                     <button class="btn btn-success" routerLink="/expupdate/{{exp.id}}">
+                     <button class="btn btn-success" routerLink="/expupdate/{{exp.id}}" *ngIf="isLogged">
                         Edit
                      </button>
                   </td>
                   <td>
-                     <button class="btn btn-danger" (click)="delete(exp.id)">
+                     <button class="btn btn-danger" (click)="delete(exp.id)" *ngIf="isLogged">
                         X
                      </button>
                   </td>

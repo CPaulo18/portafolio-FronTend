@@ -12,11 +12,11 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SkillsComponent } from './components/skills/skills.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import {FormsModule} from '@angular/forms';
-// import { AuthInterceptor } from './helpers/auth.interceptor';
+import { FormsModule } from '@angular/forms';
+import { AuthInterceptorService } from './helpers/auth-interceptor.service';
 import { NewExperienceComponent } from './components/experience/new-experience/new-experience.component';
 import { UpdateExperienceComponent } from './components/experience/update-experience/update-experience.component';
 import { NewEducationComponent } from './components/education/new-education/new-education.component';
@@ -44,18 +44,22 @@ import { UpdateAboutMeComponent } from './components/about-me/update-about-me/up
     UpdateEducationComponent,
     NewSkillComponent,
     UpdateSkillComponent,
-    UpdateAboutMeComponent
+    UpdateAboutMeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
-    // {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

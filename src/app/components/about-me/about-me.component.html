@@ -1,10 +1,10 @@
 <div class="container">
   <div>
-    <button class="btn btn-success" routerLink="/userupdate/1" *ngIf="isLogged">
+    <button class="btn btn-success" routerLink="/userupdate/2" *ngIf="isLogged">
       Edit Person
     </button>
   </div>
-  <div class="row text-light my-5" id="about">
+  <div class="row text-light my-5" id="about" *ngIf="isLogged">
 
     <div class="col-lg-4 col-xs-12 text-center">
       <img src="../../../assets/FjU2lkcWYAgNG6d.jpg" id="profile">
@@ -15,6 +15,23 @@
       <h2 class="title fs-1 text-primary">About Me</h2>
       <p class="fs-5">
         {{user.description}}
+      </p>
+    </div>
+  </div>
+
+  <div class="row text-light my-5" id="about" *ngIf="!isLogged">
+
+    <div class="col-lg-4 col-xs-12 text-center">
+      <img src="../../../assets/FjU2lkcWYAgNG6d.jpg" id="profile">
+      <p class="fs-3">Paulo Caceres</p>
+    </div>
+
+    <div class="col-lg-8 col-xs-12 text-center p-4">
+      <h2 class="title fs-1 text-primary">About Me</h2>
+      <p class="fs-5">
+        Soy una persona proactiva, excelente compañero de equipo, organizado y responsable. Disfruto mucho aprender
+        cosas nuevas, he estado trabajando en proyectos freelance y ahora mi objetivo es encontrar un puesto desafiante
+        y dinámico donde poder compartir mi experiencia y a su vez sumar nuevos conocimientos.
       </p>
     </div>
   </div>
