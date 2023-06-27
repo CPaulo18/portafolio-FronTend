@@ -8,7 +8,7 @@ import { environment } from 'src/environments/enviroment';
   providedIn: 'root',
 })
 export class UserService {
-  URL = environment.URL;
+  URL = environment.URL + "login";
   constructor(private http: HttpClient) {}
 
   public Login(creds: Credentials) {
