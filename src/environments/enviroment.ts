@@ -1,5 +1,5 @@
 export const environment = {
-  production: false,
+  //production: false,
   // firebaseConfig : {
   //   apiKey: "AIzaSyBrmOk23h-XpoP532uGB7dedoOBG8Ux6q0",
   //   authDomain: "frontend-argprog-f2b88.firebaseapp.com",
@@ -11,6 +11,6 @@ export const environment = {
   //   measurementId: "G-Q45HBK8KTX"
   // },
 
-  //URL: 'http://localhost:8080/'
+  //URL: 'http://localhost:8080/',
   URL: 'https://backendap-c68u.onrender.com/',
 };

@@ -25,7 +25,7 @@ export class AboutMeComponent implements OnInit {
   }
 
   loadPerson(): void {
-    this.sUser.detail(2).subscribe((data) => {
+    this.sUser.detail(1).subscribe((data) => {
       this.user = data;
       console.log(this.user);
     });
