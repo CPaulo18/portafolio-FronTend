@@ -1,40 +1,40 @@
 <div class="container py-5">
 
     <h1 class="text-center text-primary my-5">Hard and Soft Skills</h1>
-    <div class="row">
-        <div class="col-lg-2">
+    <div>
+        <div class="mb-4">
             <button type="button" class="btn btn-primary" routerLink="/newskill" *ngIf="isLogged">
-                New experience
+                New Skill
             </button>
         </div>
-        <div class="col">
 
-            <div class="skill-row">
-                <div class="text-center circulo" *ngFor="let skill of skill">
-                    <circle-progress [percent]="(skill.porcent)" [radius]="100" [outerStrokeWidth]="16"
-                        [innerStrokeWidth]="2" [outerStrokeColor]="'#0D6EFD'" [innerStrokeColor]="'#F8F9FA'"
-                        [title]="(skill.skillName)" [titleColor]="'#0D6EFD'" [showUnits]="false" [showSubtitle]="false"
-                        [animation]="true" [animationDuration]="300"></circle-progress>
 
-                    <div class="skill-row">
-                        <div>
-                            <button class="btn btn-success" routerLink="/skillupdate/{{skill.id}}">
-                                Edit
-                            </button>
-                        </div>
-                        <div>
-                            <button class="btn btn-danger" (click)="delete(skill.id)">
-                                X
-                            </button>
-                        </div>
+        <div class="element">
+
+            <div class="text-center circulo" *ngFor="let skill of skill">
+                <circle-progress [percent]="(skill.porcent)" [radius]="100" [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="2" [outerStrokeColor]="'#0D6EFD'" [innerStrokeColor]="'#F8F9FA'"
+                    [title]="(skill.skillName)" [titleColor]="'#0D6EFD'" [showUnits]="false" [showSubtitle]="false"
+                    [animation]="true" [animationDuration]="300"></circle-progress>
+
+                <div class="skill-row">
+                    <div>
+                        <button class="btn btn-success" routerLink="/skillupdate/{{skill.id}}">
+                            Edit
+                        </button>
                     </div>
-
+                    <div>
+                        <button class="btn btn-danger" (click)="delete(skill.id)">
+                            X
+                        </button>
+                    </div>
                 </div>
             </div>
 
 
-
         </div>
+
+
     </div>
 
 </div>

@@ -9,3 +9,15 @@
   flex-direction: row;
   align-items: center;
 }
+
+/* .elemento {
+  flex: 1 0 50%;
+  box-sizing: border-box;
+  padding: 10px;
+} */
+
+.element {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 5px;
+}
